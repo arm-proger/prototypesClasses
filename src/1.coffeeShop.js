@@ -55,7 +55,8 @@ CoffeeShop.prototype.cheapestItem = function () {
 }
 // Filter by type
 CoffeeShop.prototype.filterByType = function (productType) {
-  return this.menu.filter((el) => el.type === productType)
+  const filteredItems = this.menu.filter((el) => el.type === productType)
+  return filteredItems.map((el) => el.name)
 }
 
 // Coffee shop name
